@@ -1330,7 +1330,7 @@ class ZipFile implements ZipConstants, Closeable {
              * and Disk start number
              */
             int i = blockSize;
-            return i == 8 || i == 16 || i == 24 || i == 28 ? true : false;
+            return i == 0 || i == 8 || i == 16 || i == 24 || i == 28 ? true : false;
         }
 
         private int getEntryHash(int index) { return entries[index]; }
